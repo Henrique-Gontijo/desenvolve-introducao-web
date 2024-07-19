@@ -1,0 +1,153 @@
+/*
+1. Vamos definir algumas diretivas gerais para nossa página.
+
+    - Defina a largura geral da página em 80%, limitado a no máximo 1280px de largura. 
+     Centralize a página na tela.
+
+    - Defina a altura da seção de introdução em 550px
+
+    - Remova o container #design-archives da renderização da página
+
+2. Agora vamos incrementar o cabeçalho da página.
+
+    - Inverta a cor do cabeçalho aplicando o fundo escuro e a fonte clara.
+
+    - Coloque título e subtítulo lado-a-lado, mas mantendo espaçamento entre 
+    eles e o restante da página.
+
+    - Adicione um espaçamento lateral de 1em para o título principal.
+
+3. É hora de incrementar os menus!
+
+    - Remova os bullets dos itens de menu presentes no painel lateral.
+
+    - Aumente o espaçamento entre os itens do menu para 1em, pelo menos.
+
+    - Centralize os itens presentes em cada menu.
+
+4. Por fim, vamos aplicar uma inversão de cores no rodapé para ele ganhar um contraste 
+em relação ao restante da página.
+
+    - Adicione 4% de espaçamento externo no rodapé.
+
+    - Transforme cada link do rodapé em uma caixa colocando borda sólida de 2px, e 
+    espaçamento interno de 0.5em.
+*/
+
+/* Aspectos Gerais da Página*/
+html {
+    /* Cores da Página */
+    background-color: rgb(205, 255, 240);
+    color: rgb(39, 95, 95);
+    
+
+    /* Estilização do Texto */
+     font-size: 18px;
+    font-family: 'Trebuchet MS', Verdana, Arial, sans-serif;
+
+}
+
+/* Destaque Primário */
+.cor_1 {
+        color: rgb(242, 68, 4);
+}
+
+/* Destaque Secundário */
+.cor_2 {
+    color: rgb(249, 126, 8);
+}
+
+/* Cor Intermediária */
+.cor_3 {
+    color: rgb(33, 186, 186);
+}
+
+p {
+    text-indent: 1em; 
+}
+
+/* Aspectos dos Títulos */
+h1, h2, h3 {
+    text-align: center;
+}
+h1 {
+    font-size: 1.8rem;
+}
+h2 {
+    font-size: 1.4rem;
+}
+h3 {
+    font-size:1.2rem;
+}
+
+/* Aspectos do Resumo */
+.summary {
+    text-align: center;
+}
+
+/* Aspectos do Conteúdo Principal */
+.main p {
+    line-height: 1.5;
+}
+
+/* Abreviaturas */
+abbr {
+    font-variant: small-caps;
+}
+
+/* Box Model */
+.page-wrapper {
+    width: 80%;
+    max-width: 1280px;
+    margin: auto;
+}
+
+/* Aspectos da Introdução */
+.intro {
+    height: 550px;
+}
+
+/* Conteúdo Não Exibido */
+.design-archives {
+    display: none;
+}
+
+/* Aspectos do Cabeçalho */
+header {
+    background-color: rgb(39, 95, 95);
+    color: rgb(205, 255, 240);
+    text-align: center;
+}
+
+header > h1, h2 {
+    display: inline-block;
+}
+
+h1 {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+/* Aspectos dos Menus */
+aside ul {
+    list-style-type: none;
+}
+
+aside ul li {
+    margin: 1.2em;
+    text-align: center;
+}
+
+/* Aspectos do Rodapé */
+footer {
+    background-color: rgb(39, 95, 95);
+    margin: 4%;
+    padding: 0.2em;
+}
+
+footer a {
+    color: rgb(205, 255, 240);
+    border: solid 2px rgb(33, 186, 186);
+    padding: 0.5em;
+    display: inline-block
+}
