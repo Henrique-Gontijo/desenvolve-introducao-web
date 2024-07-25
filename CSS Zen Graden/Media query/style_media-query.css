@@ -1,0 +1,366 @@
+/*
+1. Crie uma media query para telas inferiores a 768 pixels; nós a utilizaremos 
+como layout mobile.
+
+2. Realize as seguintes mudanças para o layout mobile:
+
+    - Remova o reposicionamento do menu de design para que ele se encaixe no 
+    mesmo lugar de antes.
+
+    - Remova a borda lateral ao lado da div
+
+    - Mude a orientação do Flexbox presente no elemento para vertical, e organize 
+    os elementos de forma empilhada
+
+    - Remova a altura fixa presente no cabeçalho da página
+
+    - Remova também o espaçamento inicial dado a cada um dos parágrafos
+
+Vamos Deixar nossa página mais adequada a mídia de impressão também!
+
+1. Crie uma media query para meios impressos, mas sem qualquer tipo de restrição 
+relacionada a tela
+
+2. Adicione as seguintes modificações a essa media query: 
+
+    - Altere o estilo da fonte para uma serifada, como times .
+
+    - Inverta as cores do banner para que o fundo fique claro (assim como o 
+    restante da página)
+*/
+
+/* Aspectos Gerais da Página*/
+html {
+    /* Cores da Página */
+    background-color: rgba(205, 255, 240, 0.5);
+    color: rgb(39, 95, 95);
+    
+
+    /* Estilização do Texto */
+     font-size: 18px;
+    font-family: 'Trebuchet MS', Verdana, Arial, sans-serif;
+
+}
+
+/* Destaque Primário */
+.cor_1 {
+        color: rgb(242, 68, 4);
+}
+
+/* Destaque Secundário */
+.cor_2 {
+    color: rgb(249, 126, 8);
+}
+
+/* Cor Intermediária */
+.cor_3 {
+    color: rgb(33, 186, 186);
+}
+
+p {
+    text-indent: 1em; 
+}
+
+/* Aspectos dos Títulos */
+h1, h2, h3 {
+    text-align: center;
+}
+h1 {
+    font-size: 1.8rem;
+}
+h2 {
+    font-size: 1.4rem;
+}
+h3 {
+    font-size:1.2rem;
+}
+
+/* Aspectos do Resumo */
+.summary {
+    text-align: center;
+}
+
+/* Aspectos do Conteúdo Principal */
+.main p {
+    line-height: 1.5;
+}
+
+/* Abreviaturas */
+abbr {
+    font-variant: small-caps;
+}
+
+/* Aspectos do Conteúdo */
+.page-wrapper {
+    width: 80%;
+    max-width: 1280px;
+    margin: auto;
+    position: relative;
+}
+
+/* Aspectos do Cabeçalho */
+.intro {
+    height: 550px;
+}
+
+/* Conteúdo Não Exibido */
+.design-archives {
+    display: none;
+}
+
+/* Aspectos do Banner */
+header {
+    background-color: rgb(39, 95, 95);
+    color: rgb(205, 255, 240);
+    text-align: center;
+}
+
+header > h1, h2 {
+    display: inline-block;
+}
+
+h1 {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+/* Aspectos dos Menus */
+aside ul {
+    list-style-type: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+aside ul li {
+    margin: 1em;
+    text-align: center;
+}
+
+/* Posicionamento do Menu de Designs */
+.design-selection {
+    position: absolute;
+    top: 530px;
+    left: 62%;
+    width: 34%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+/* Separação entre cada intem */
+.design-selection li {
+    border-top: solid 1px rgb(39, 95, 95);
+    margin-top: 9px;
+    margin-bottom: 9px;
+    padding-top: 9px;
+}
+
+.design-selection li:last-of-type {
+    border-bottom: solid 1px rgb(39, 95, 95);
+    padding-bottom: 9px;
+}
+
+/* Aspectos do Rodapé */
+footer {
+    background-color: rgb(39, 95, 95);
+    margin: 4%;
+    padding: 3px;
+
+    /* Flexbox */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+footer a {
+    color: rgb(205, 255, 240);
+    border: solid 2px rgb(33, 186, 186);
+    padding: 0.5em;
+    text-align: center;
+    margin: 2px;
+
+    /* Flexbox */
+    flex-basis: 100px;
+}
+
+/* Aspectos do Painel de Explicação */
+.explanation {
+    width: 60%;
+    margin-right: 35%;
+    border-right: solid 1px rgb(39, 95, 95);
+    padding-right: 2%;
+    padding-bottom: 1%;
+}
+
+
+/* Aspectos da Seção de Benefícios */
+.benefits {
+    display: flex;
+    border-bottom: solid 1px rgb(39, 95, 95);
+    border-top: solid 1px rgb(39, 95, 95);
+}
+
+.benefts p {
+    flex-basis: 70%;
+}
+
+.benefits h3 {
+    order: 2;
+    align-self: center;
+    flex-basis: 30%;
+}
+
+/* Aspectos da Seção de Participação */
+.participation {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: solid 1px rgb(39, 95, 95);
+    margin-top: 18px;
+}
+
+.participation h3, .participation p {
+    flex-basis: 50%;
+}
+
+.participation h3 {
+    align-self: center;
+}
+
+/* Aspecto dos Links */
+a {
+    font-weight: bold;
+    color: rgb(249, 126, 8);
+}
+
+a:hover {
+    color: rgb(214, 104, 0);
+}
+
+a:active,
+a:visited {
+    font-weight: 400;
+}
+
+/* Estilização das primeiras letras 
+dos parágrafos iniciais de cada tema */
+.main p:first-of-type:first-letter {
+    font-size: 3em; 
+    font-family: 'Times New Roman';
+    float: left;
+}
+
+
+/* Media Queries */
+
+/* Media Query para telas */
+@media screen and (max-width: 768px) {
+    
+    /* Aspectos do Menu de Desings */
+    .design-selection {
+        position: static;
+        width: 100%;
+    }
+
+    /* Aspectos do Painel de Explicação */
+    .explanation {
+        border: none;
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+
+    /* Aspectos do Painel de Participação */
+    .participation {
+        flex-direction: column;
+
+    }
+
+    .participation h3, .participation p {
+        flex-basis: 100%;
+    }
+    /* Aspectos do Painel de Benefícios */
+    .benefits {
+        flex-direction: column;
+    }
+
+    .benefits h3 {
+        order: 0;
+        flex-basis: 100%;
+    }
+
+    .benefits p {
+        flex-basis: 100%;
+    }
+
+    /* Aspectos do Cabeçalho */
+    .intro {
+        height: 100%;
+    }
+
+    /* Espaçamento dos parágrafos */
+    p {
+        text-indent: 0;
+    }
+
+    /* Aspectos do Rodapé */
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer a {
+        flex-basis: 100%;
+        width: 90%;
+        margin: 1%;
+        justify-content: center;
+        font-size: 1.1em;
+    }
+}
+
+/* Media Query para Impressão */
+@media print {
+    /* Aspectos Gerais */
+    html {
+        font-style: Georgia, 'Times New Roman', Times, serif;
+        background-color: white;
+        color: rgb(23, 57, 57)
+    }
+
+    /* Aspectos do Banner e do Footer */
+    header {
+        background-color: white;
+        color: rgb(23, 57, 57);
+    }
+
+    footer {
+        background-color: white;
+        color: rgb(23, 57, 57);
+    }
+
+    footer a {
+        background-color: white;
+        color: rgb(23, 57, 57);
+        border: solid 2px rgb(23, 57, 57);
+        flex-basis: 50px
+    }
+
+    /* Aspectos dos Links */
+    a {
+        color: rgb(187, 50, 0);
+    }
+
+    /* Aspectos do Menu de Desings */
+    .design-selection {
+        position: static;
+        width: 100%;
+    }
+
+    /* Aspectos do Painel de Explicação */
+    .explanation {
+        border-right: none;
+        border-top: solid 1px rgb(39, 95, 95);
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        margin-top: 3rem;
+    }
+}
