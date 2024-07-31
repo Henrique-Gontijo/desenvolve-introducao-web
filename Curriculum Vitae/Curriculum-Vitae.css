@@ -217,6 +217,14 @@ footer h3 {
 }
 
 @media print {
+    html {
+        font-family: 'Times New Roman', Times, serif
+    }
+    
+    h1, h2, h3 { 
+        font-family: Georgia, serif;
+    }
+    
     header {
         color: #023535;
         background-color: white;
